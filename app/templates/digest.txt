@@ -1,0 +1,28 @@
+🎯 YOUR DAILY JOB MATCHES
+{{ date }} • {{ job_count }} new opportunities
+
+{% if jobs %}
+{% for job in jobs %}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{{ job.title }}
+{{ job.company }}
+{% if job.location %}📍 {{ job.location }}{% endif %}{% if job.salary_min and job.salary_max %} • 💰 ${{ "{:,}".format(job.salary_min) }} - ${{ "{:,}".format(job.salary_max) }}{% elif job.salary_min %} • 💰 From ${{ "{:,}".format(job.salary_min) }}{% endif %}{% if job.remote %} • 🌍 Remote{% endif %}
+
+✨ {{ (job.score * 100)|round|int }}% Match
+
+View Job: {{ job.url }}
+
+{% endfor %}
+{% else %}
+No new job matches today. We'll keep looking for you! 🔍
+{% endif %}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You're receiving this because you have daily digest enabled.
+
+Update Preferences: {{ preferences_url }}
+Unsubscribe: {{ unsubscribe_url }}
+
+© {{ year }} Arbeit. All rights reserved.

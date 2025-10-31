@@ -1,0 +1,56 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# Authentication & Security
+bcrypt==4.1.1
+pyjwt==2.8.0
+pydantic[email]==2.5.0
+pydantic-settings==2.1.0
+
+# Rate Limiting
+slowapi==0.1.9
+
+# Logging
+structlog==23.2.0
+
+# Redis (for caching/sessions/celery)
+redis==5.0.1
+
+# HTTP Client & Scraping
+httpx==0.25.2
+beautifulsoup4==4.12.2
+lxml==5.1.0
+feedparser==6.0.11
+
+# Fuzzy Matching for Deduplication
+rapidfuzz==3.6.1
+
+# Background Tasks
+celery==5.3.6
+flower==2.0.1  # Celery monitoring UI
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Development
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+
+# Type Checking
+mypy==1.7.1
+
+# Email Service
+resend==0.8.0
+jinja2==3.1.2
+
+# Scheduling
+apscheduler==3.10.4
